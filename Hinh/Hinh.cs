@@ -2,63 +2,36 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ExampleCAdvance.Entities
+
+namespace ExampleCAdvance.Hinh;
+
+public abstract class Shape
 {
-    public class Student
+    public string Name { get; set; } = string.Empty;
+
+    protected Shape()
     {
-        private string id = string.Empty;
-        private string name = string.Empty;
-        private int age;
-        private string address = string.Empty;
-        private DateTime dob;
+        Name = "Shape";
+    }
 
-        public string Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
+    protected Shape(string name)
+    {
+        Name = name;
+    }
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+    // Abstract methods to be implemented by specific shapes
+    public abstract double Tinhdientich();
+    public abstract double Tinhchuvi();
 
-        public int Age
-        {
-            get { return age; }
-            set { age = value; }
-        }
-
-        public string Address
-        {
-            get { return address; }
-            set { address = value; }
-        }
-
-        public DateTime Dob
-        {
-            get { return dob; }
-            set { dob = value; }
-        }
-
-        public Student()
-        {
-        }
-
-        public Student(string id, string name, int age, string address, DateTime dob)
-        {
-            if (string.IsNullOrEmpty(id))
-            {
-                throw new ArgumentException("Invalid input parameters: id cannot be null or empty.");
-            }
-
-            this.id = id;
-            this.name = name;
-            this.age = age;
-            this.address = address;
-            this.dob = dob;
-        }
+    public virtual void DisplayInfo()
+    {
+        Console.WriteLine($"Shape: {Name} | Area: {Tinhdientich():F2} | Perimeter: {Tinhchuvi():F2}");
     }
 }
 
+// Alias for plural naming if referenced as Shapes
+public abstract class Shapes : Shape
+{
+    protected Shapes() : base() { }
+    protected Shapes(string name) : base(name) { }
+}
