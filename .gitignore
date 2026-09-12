@@ -1,0 +1,18 @@
+﻿## Build artifacts
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+
+## Visual Studio & VS Code user files
+*.user
+*.userosscache
+*.suo
+.vs/
+.vscode/
+
+## Archives & Backups
+*.zip
+*.tar.gz
+*.7z
+backup_*.zip
