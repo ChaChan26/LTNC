@@ -1,11 +1,4 @@
-/*
- * Bai 1 - Console Input and Sum Calculation
- *
- * Author: ChaChan26 <minhharry2006@gmail.com>
- * Copyright (c) 2026 ChaChan26. All rights reserved.
- */
-
-//bai 1 12/09/26
+﻿//bai 1 12/09/26
 
 using System;
 using System.Collections.Generic;

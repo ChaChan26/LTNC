@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Student entity representing a student with personal details.
  *
  * Author: ChaChan26 <minhharry2006@gmail.com>
